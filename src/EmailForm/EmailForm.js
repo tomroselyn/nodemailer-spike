@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './EmailForm.css';
+import {Button, TextField} from '@material-ui/core';
 
 class EmailForm extends Component {
 
@@ -36,29 +38,24 @@ class EmailForm extends Component {
     render() {
         return  (
             <div>
-                <h2>Send an Email</h2>
                 <form id="emailForm" className="emailForm" onSubmit={this.submitForm} method="POST">
-                    <div>
-                        <label>your name: </label>
-                        <input type="text" placeholder="your name" id="name" />
+                    <div className="form-group-center">
+                        <h3>Email Sender</h3>
                     </div>
-                    <div>
-                        <label>your email address: </label>
-                        <input type="text" placeholder="yourname@example.com" id="sendEmail" />
+                    <div className="form-group">
+                        <TextField id="name" label="your name" />
+                        <TextField id="sendEmail" label="your email address" />
                     </div>
-                    <div>
-                        <label>recipient email address: </label>
-                        <input type="text" placeholder="theirname@example.com" id="recEmail" />
+                    <div className="form-group">
+                        <TextField id="recEmail" label="recipient email address" />
+                        <TextField id="subject" label="subject line" />
                     </div>
-                    <div>
-                        <label>subject line: </label>
-                        <input type="text" placeholder="what's up?" id="subject" />
+                    <div className="form-group">
+                        <TextField multiline id="message" label="message" /><br />
                     </div>
-                    <div>
-                        <label>message: </label>
-                        <textarea placeholder="message" rows="5" id="message" /><br />
+                    <div className="form-group-center">
+                        <Button variant="contained" color="primary" className="form-button" type="submit">Send</Button>
                     </div>
-                    <button type="submit">Send</button>
                 </form>
             </div>
         )
