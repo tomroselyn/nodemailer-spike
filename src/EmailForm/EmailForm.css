@@ -1,5 +1,7 @@
 h3 {
-    color: dimgray;
+    color: #282c34;
+    font-size: 18px;
+    margin: 0;
 }
 
 .emailForm {
@@ -10,7 +12,8 @@ h3 {
 }
 
 .form-group * {
-    margin: 8px !important;
+    margin: 8px auto !important;
+    width: 100%;
 }
 
 .form-group-center {
@@ -20,4 +23,8 @@ h3 {
 .form-button {
     width: 200px;
     margin-top: 20px !important;
+}
+
+.multiline {
+    width: 100%;
 }

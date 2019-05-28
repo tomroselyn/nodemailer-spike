@@ -40,18 +40,18 @@ class EmailForm extends Component {
             <div>
                 <form id="emailForm" className="emailForm" onSubmit={this.submitForm} method="POST">
                     <div className="form-group-center">
-                        <h3>Email Sender</h3>
+                        <h3>send an email</h3>
                     </div>
                     <div className="form-group">
                         <TextField id="name" label="your name" />
                         <TextField id="sendEmail" label="your email address" />
                     </div>
                     <div className="form-group">
-                        <TextField id="recEmail" label="recipient email address" />
+                        <TextField id="recEmail" label="recipient's email address" />
                         <TextField id="subject" label="subject line" />
                     </div>
                     <div className="form-group">
-                        <TextField multiline id="message" label="message" /><br />
+                        <TextField multiline id="message" label="message" className="multiline" /><br />
                     </div>
                     <div className="form-group-center">
                         <Button variant="contained" color="primary" className="form-button" type="submit">Send</Button>
